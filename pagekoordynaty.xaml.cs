@@ -30,7 +30,7 @@ namespace map
         
         string link = "http://dev.virtualearth.net/REST/v1/Locations?q=";
         string city="";
-        string key = "&key=CgZKS8wrR5vblv8CmSMI~byS6UYfcdjbExSmJHDOtqA~AjNB7bfiB8k9tHLod_9Ua1-r_dV6gL17-htjQ0Y0z7WFYNhBa7OhlW-ZCVIwAOfP";
+        string key = "&key=writeyourkey";
         public pagekoordynaty()
         {
             this.InitializeComponent();
