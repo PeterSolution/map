@@ -1,0 +1,33 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:map"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Windows.UI.Xaml.Controls.Maps"
+    x:Class="map.MainPage"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Custom:MapControl x:ConnectionId='2' x:Name="map" Margin="0,136,0,71" MapServiceToken="CgZKS8wrR5vblv8CmSMI~byS6UYfcdjbExSmJHDOtqA~AjNB7bfiB8k9tHLod_9Ua1-r_dV6gL17-htjQ0Y0z7WFYNhBa7OhlW-ZCVIwAOfP"/>
+        <TextBox HorizontalAlignment="Left" Margin="28,14,0,0" TextWrapping="Wrap" Text="Nawigator" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="28,51,0,0" TextWrapping="Wrap" Text="Mapa" VerticalAlignment="Top" Height="62" Width="120" FontSize="36"/>
+        <Button x:ConnectionId='3' Content="" Margin="554,929,0,0" VerticalAlignment="Top" Height="71" Width="82"                     />
+        <Button x:ConnectionId='4' Content="" Margin="664,929,0,0" VerticalAlignment="Top" Height="71" Width="82"                       />
+        <Button x:ConnectionId='5' Content="" Margin="786,929,0,0" VerticalAlignment="Top" Height="71" Width="82"                       />
+        <Button x:ConnectionId='6' Content="" Margin="958,929,0,0" VerticalAlignment="Top" Height="71" Width="82"                       />
+        <AppBarSeparator HorizontalAlignment="Left" Margin="866,929,0,0" VerticalAlignment="Top" Height="71" Width="92"/>
+        <TextBox HorizontalAlignment="Left" Margin="554,976,0,0" TextWrapping="Wrap" Text="Powieksz" TextAlignment="Center" VerticalAlignment="Top" Height="24" Width="82" FontSize="10" BorderBrush="#66FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Margin="664,976,0,0" TextWrapping="Wrap" Text="Zmniejsz" TextAlignment="Center" VerticalAlignment="Top" Height="24" Width="82" FontSize="10" BorderBrush="#66FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Margin="786,976,0,0" TextWrapping="Wrap" Text="Satelita" TextAlignment="Center" VerticalAlignment="Top" Height="24" Width="82" FontSize="10" BorderBrush="#66FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Margin="958,976,0,0" TextWrapping="Wrap" Text="Koordynaty" TextAlignment="Center" VerticalAlignment="Top" Height="24" Width="82" FontSize="10" BorderBrush="#66FFFFFF"/>
+        <Image x:ConnectionId='7' x:Name="im3" HorizontalAlignment="Left" Height="47" Margin="554,929,0,0" VerticalAlignment="Top" Width="82"/>
+        <Image x:ConnectionId='8' x:Name="im4" HorizontalAlignment="Left" Height="47" Margin="664,929,0,0" VerticalAlignment="Top" Width="82"/>
+        <Image x:ConnectionId='9' x:Name="im5" HorizontalAlignment="Left" Height="47" Margin="786,929,0,0" VerticalAlignment="Top" Width="80"/>
+        <Image x:ConnectionId='10' x:Name="im6" HorizontalAlignment="Left" Height="47" Margin="958,929,0,0" VerticalAlignment="Top" Width="82"/>
+
+    </Grid>
+</Page>
+
