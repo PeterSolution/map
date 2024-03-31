@@ -12,17 +12,17 @@
         <TextBox HorizontalAlignment="Left" Margin="45,57,0,0" TextWrapping="Wrap" Text="Nawigator" VerticalAlignment="Top" FontSize="22" IsReadOnly="True"/>
         <TextBox HorizontalAlignment="Left" Margin="45,140,0,0" TextWrapping="Wrap" Text="Koordynaty" VerticalAlignment="Top" FontSize="48" IsReadOnly="True"/>
         <TextBox HorizontalAlignment="Center" Margin="0,256,0,0" TextWrapping="Wrap" Text="GPS: moje polozenie" VerticalAlignment="Top" FontSize="28" IsReadOnly="True"/>
-        <TextBox x:Name="boxlocation" HorizontalAlignment="Center" Margin="0,339,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="44" Width="1415" Background="#667BFFC5" TextAlignment="Center" IsReadOnly="True" FontSize="22"/>
-        <TextBox HorizontalAlignment="Left"  Margin="319,696,0,0" TextWrapping="Wrap" Text="Długość geograficzna: &#x0a;Szerokość geograficzna" AcceptsReturn="True" VerticalAlignment="Top" Height="140" Width="906" Background="#667BFFC5"  IsReadOnly="True" FontSize="36"/>
+        <TextBox x:Name="boxlocation" HorizontalAlignment="Center" Margin="0,339,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="44" Width="1415" Background="#667BFFC5" TextAlignment="Center" IsReadOnly="True" FontSize="22"  />
+        <TextBox x:Name="geograficzna" HorizontalAlignment="Left"  Margin="319,696,0,0" TextWrapping="Wrap" Text="Długość geograficzna: &#x0a;Szerokość geograficzna" AcceptsReturn="True" VerticalAlignment="Top" Height="140" Width="906" Background="#667BFFC5"  IsReadOnly="True" FontSize="36"/>
         <TextBox HorizontalAlignment="Left" Margin="641,0,0,0" TextWrapping="Wrap" Text="podaj adres celu" VerticalAlignment="Center" FontSize="28"  IsReadOnly="True"/>
         <TextBox x:Name="boxdestination" HorizontalAlignment="Left" Margin="494,560,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="60" Width="580" FontSize="36"/>
-        <Button x:Name="btnpow" Content=""  Margin="0,924,0,0" VerticalAlignment="Top" Height="76" Width="76" Background="#33FFFFFF"/>
-        <Button x:Name="btnszuk" Content="" Margin="1424,924,0,0" VerticalAlignment="Top" Height="76" Width="76" Background="#33FFFFFF" Click="btnszuk_Click"/>
         <TextBox HorizontalAlignment="Left" Margin="0,968,0,0" TextWrapping="Wrap" Text="Powrot" VerticalAlignment="Top" Width="76" BorderBrush="#66FFFFFF" FontSize="18" IsReadOnly="True" TextAlignment="Center"/>
         <TextBox HorizontalAlignment="Left" Margin="1424,962,0,0" TextWrapping="Wrap" Text="Szukaj" VerticalAlignment="Top" Width="76" FontSize="18" BorderBrush="#66FFFFFF" TextAlignment="Center"/>
-        <Image x:Name="im1" HorizontalAlignment="Left" Height="44" Margin="0,924,0,0" VerticalAlignment="Top" Width="76"/>
-        <Image x:Name="im2" HorizontalAlignment="Left" Height="44" Margin="1424,924,0,0" VerticalAlignment="Top" Width="76"/>
+        <Image x:Name="im1" HorizontalAlignment="Left" Height="44" Margin="0,924,0,0" VerticalAlignment="Top" Width="76" Source="/mappow.png" Stretch="Fill"/>
+        <Image x:Name="im2" HorizontalAlignment="Left" Height="44" Margin="1424,924,0,0" VerticalAlignment="Top" Width="76" Source="/szukaj.png" Stretch="Fill"/>
         <TextBox HorizontalAlignment="Left" Margin="319,656,0,0" TextWrapping="Wrap" Text="Wyznaczone Współrzędne geograficzne" TextAlignment="Center" VerticalAlignment="Top" Height="40" Width="906" Background="#667BFFC5"  IsReadOnly="True" FontWeight="Bold" FontSize="20"/>
 
+        <Button x:Name="btnpow" Content=""  Margin="0,924,0,0" VerticalAlignment="Top" Height="76" Width="76" Background="#33FFFFFF" Click="btnpow_Click"/>
+        <Button x:Name="btnszuk" Content="" Margin="1424,924,0,0" VerticalAlignment="Top" Height="76" Width="76" Background="#33FFFFFF" Click="btnszuk_Click"/>
     </Grid>
 </Page>

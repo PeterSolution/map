@@ -14,6 +14,12 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Controls.Maps;
 using Windows.Devices.Geolocation;
+using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Net.Http;
+using Windows.Services.Maps;
+using Windows.UI;
+using System.Net;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x415
 
@@ -24,19 +30,39 @@ namespace map
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        double yourheight, yourwidth;
+        double destheight, destwidth;
+        public string a;
+        Geolocator geolocator = new Geolocator();
+        Geopoint yourlocation;
         public MainPage()
         {
             this.InitializeComponent();
             map.Style = MapStyle.Terrain;
-            BasicGeoposition cityPosition = new BasicGeoposition()
-            {
-                Latitude = 54.35603333,
-                Longitude = 18.64612007
-            };
-            Geopoint cityCenter = new Geopoint(cityPosition);
+            map.ZoomLevel = 10;
+            geolocator.DesiredAccuracyInMeters = 100;
 
-            map.Center = cityCenter;
-            map.ZoomLevel = 12;
+            yourlocalization();
+
+        }
+        private async Task yourlocalization()
+        {
+            try
+            {
+                Geoposition position = await geolocator.GetGeopositionAsync();
+                yourheight = position.Coordinate.Point.Position.Latitude;
+                yourwidth = position.Coordinate.Point.Position.Longitude;
+                yourlocation = new Geopoint(new BasicGeoposition()
+                {
+                    Latitude = position.Coordinate.Point.Position.Latitude,
+                    Longitude = position.Coordinate.Point.Position.Longitude
+
+                });
+                map.Center = yourlocation;
+            }
+            catch
+            {
+            }
         }
 
 
@@ -48,14 +74,7 @@ namespace map
         {
             map.ZoomLevel--;
         }
-        public void satelita()
-        {
-
-        }
-        public void koordynaty() 
-        { 
-
-        }
+        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -81,20 +100,54 @@ namespace map
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(pagekoordynaty));
+            Frame.Navigate(typeof(pagekoordynaty), new Tuple<double, double>(yourheight, yourwidth));
             Frame.BackStack.Clear();
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            base.OnNavigatedTo(e);
-            Geopoint city = e.Parameter as Geopoint;
-            if (city != null)
+            string[] parts = e.Parameter.ToString().Split(',');
+            if (parts.Length == 2)
             {
-                map.Center = city;
+                double latitude, longitude;
+                if (double.TryParse(parts[0], out latitude) && double.TryParse(parts[1], out longitude))
+                {
+                    Tuple<double, double> parameters = Tuple.Create(latitude, longitude);
+                    // Teraz możesz użyć parametrów
+                    destheight = parameters.Item1;
+                    destwidth = parameters.Item2;
+                    routetopoint();
+                }
             }
+
+
+            
+
         }
+        private async Task routetopoint()
+        {
+
+            BasicGeoposition destinationPoint = new BasicGeoposition()
+            {
+                Latitude = destheight,
+                Longitude = destwidth
+            };
+            Geopoint endPoint = new Geopoint(destinationPoint);
+            
+            MapRouteFinderResult routeResult = await MapRouteFinder.GetDrivingRouteAsync(yourlocation, endPoint);
+
+            // Rysowanie trasy na mapie
+            if (routeResult.Status == MapRouteFinderStatus.Success)
+            {
+                MapRouteView routeView = new MapRouteView(routeResult.Route);
+                routeView.RouteColor = Windows.UI.Colors.Blue;
+                map.Routes.Add(routeView);
+            }
+
+
+        }
+
         
     }
 
-    
+
 }

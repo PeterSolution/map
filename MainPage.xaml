@@ -11,22 +11,22 @@
 
     <Grid>
 
-        <Custom:MapControl x:Name="map" Margin="0,136,0,71" MapServiceToken="CgZKS8wrR5vblv8CmSMI~byS6UYfcdjbExSmJHDOtqA~AjNB7bfiB8k9tHLod_9Ua1-r_dV6gL17-htjQ0Y0z7WFYNhBa7OhlW-ZCVIwAOfP"/>
+        <Custom:MapControl x:Name="map" Margin="0,136,0,89" MapServiceToken="Yourkey" />
         <TextBox HorizontalAlignment="Left" Margin="28,14,0,0" TextWrapping="Wrap" Text="Nawigator" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="28,51,0,0" TextWrapping="Wrap" Text="Mapa" VerticalAlignment="Top" Height="62" Width="120" FontSize="36"/>
+        <AppBarSeparator HorizontalAlignment="Left" Margin="871,929,0,0" VerticalAlignment="Top" Height="71" Width="87"/>
+        <TextBox HorizontalAlignment="Left" Margin="554,976,0,0" TextWrapping="Wrap" Text="Powieksz" TextAlignment="Center" VerticalAlignment="Top" Height="24" Width="82" FontSize="10" BorderBrush="#66FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Margin="664,976,0,0" TextWrapping="Wrap" Text="Zmniejsz" TextAlignment="Center" VerticalAlignment="Top" Height="24" Width="86" FontSize="10" BorderBrush="#66FFFFFF"/>
+        <TextBox HorizontalAlignment="Left" Margin="786,976,0,0" TextWrapping="Wrap" Text="Satelita" TextAlignment="Center" VerticalAlignment="Top" Height="24" Width="82" FontSize="10" BorderBrush="#66FFFFFF"/>
+        <TextBox x:Name="tt" HorizontalAlignment="Left" Margin="958,976,0,0" TextWrapping="Wrap" Text="Koordynaty" TextAlignment="Center" VerticalAlignment="Top" Height="24" Width="82" FontSize="10" BorderBrush="#66FFFFFF"/>
+        <Image x:Name="im3" HorizontalAlignment="Left" Height="47" Margin="554,929,0,0" VerticalAlignment="Top" Width="82" Source="/plus.png" Stretch="Fill"/>
+        <Image x:Name="im4" HorizontalAlignment="Left" Height="47" Margin="664,929,0,0" VerticalAlignment="Top" Width="82" Source="/minus.png" Stretch="Fill"/>
+        <Image x:Name="im5" HorizontalAlignment="Left" Height="47" Margin="786,929,0,0" VerticalAlignment="Top" Width="82" Source="/S.png" Stretch="Fill"/>
+        <Image x:Name="im6" HorizontalAlignment="Left" Height="47" Margin="958,929,0,0" VerticalAlignment="Top" Width="82" Source="/globus.png" Stretch="Fill"/>
+
         <Button Content="" Margin="554,929,0,0" VerticalAlignment="Top" Height="71" Width="82" Click="Button_Click"/>
         <Button Content="" Margin="664,929,0,0" VerticalAlignment="Top" Height="71" Width="82" Click="Button_Click_1"/>
         <Button Content="" Margin="786,929,0,0" VerticalAlignment="Top" Height="71" Width="82" Click="Button_Click_2"/>
         <Button Content="" Margin="958,929,0,0" VerticalAlignment="Top" Height="71" Width="82" Click="Button_Click_3"/>
-        <AppBarSeparator HorizontalAlignment="Left" Margin="866,929,0,0" VerticalAlignment="Top" Height="71" Width="92"/>
-        <TextBox HorizontalAlignment="Left" Margin="554,976,0,0" TextWrapping="Wrap" Text="Powieksz" TextAlignment="Center" VerticalAlignment="Top" Height="24" Width="82" FontSize="10" BorderBrush="#66FFFFFF"/>
-        <TextBox HorizontalAlignment="Left" Margin="664,976,0,0" TextWrapping="Wrap" Text="Zmniejsz" TextAlignment="Center" VerticalAlignment="Top" Height="24" Width="82" FontSize="10" BorderBrush="#66FFFFFF"/>
-        <TextBox HorizontalAlignment="Left" Margin="786,976,0,0" TextWrapping="Wrap" Text="Satelita" TextAlignment="Center" VerticalAlignment="Top" Height="24" Width="82" FontSize="10" BorderBrush="#66FFFFFF"/>
-        <TextBox HorizontalAlignment="Left" Margin="958,976,0,0" TextWrapping="Wrap" Text="Koordynaty" TextAlignment="Center" VerticalAlignment="Top" Height="24" Width="82" FontSize="10" BorderBrush="#66FFFFFF"/>
-        <Image x:Name="im3" HorizontalAlignment="Left" Height="47" Margin="554,929,0,0" VerticalAlignment="Top" Width="82"/>
-        <Image x:Name="im4" HorizontalAlignment="Left" Height="47" Margin="664,929,0,0" VerticalAlignment="Top" Width="82"/>
-        <Image x:Name="im5" HorizontalAlignment="Left" Height="47" Margin="786,929,0,0" VerticalAlignment="Top" Width="80"/>
-        <Image x:Name="im6" HorizontalAlignment="Left" Height="47" Margin="958,929,0,0" VerticalAlignment="Top" Width="82"/>
-
     </Grid>
 </Page>
